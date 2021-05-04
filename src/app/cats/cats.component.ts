@@ -49,7 +49,7 @@ export class CatsComponent implements OnInit {
       "fait ces besoins sur vos chaussures",
       "se frotte à vos jambes"
     ];
-    let pickRandomNumber = Math.round(Math.random()*listOfActions.length)-1;
+    let pickRandomNumber = Math.floor(Math.random()*listOfActions.length);
     return listOfActions[pickRandomNumber];
   }
 
