@@ -1,0 +1,14 @@
+<div *ngFor="let chat of cats" [ngStyle]="myStyles.divPrincipal">
+    <div [ngStyle]="myStyles.divNom">{{chat.nom}}</div>
+    <div>
+        <div>
+            <p >Pellage de type {{chat.pellage}} </p>
+            <p>Couleurs 
+                <span *ngFor="let couleur of chat.couleurs">{{couleur}} </span>
+            </p>
+        </div>
+        <p>{{chat.age}} ans</p>
+        <input type="button" value="Action" (click) = "doAction(chat,randomAction())">
+        <br><span>Renommer le chat : </span><input [(ngModel)] = "chat.nom">
+    </div>
+</div>
